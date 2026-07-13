@@ -1,0 +1,22 @@
+{
+  "templates": [
+    {
+      "id": "research_pipeline",
+      "steps": [
+        "search",
+        "summarize",
+        "verify"
+      ]
+    },
+    {
+      "id": "code_refactor",
+      "steps": [
+        "analyze",
+        "patch",
+        "test"
+      ]
+    }
+  ],
+  "last_test_run": "2026-07-13 13:18:40",
+  "suite_build": 17
+}

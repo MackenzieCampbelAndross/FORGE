@@ -9,3 +9,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-07-13 11:04:00**: `docs(api): add structured telemetry event logging for agent tool calls`
   *Updated specifications and documentation details.*
 - [2026-07-13 11:46:45] perf(dag): implement async task DAG scheduler with dependency resolution
+- [2026-07-13 13:37:35] fix(subagents): add structured telemetry event logging for agent tool calls

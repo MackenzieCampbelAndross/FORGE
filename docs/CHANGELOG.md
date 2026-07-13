@@ -12,3 +12,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-13 13:37:35] fix(subagents): add structured telemetry event logging for agent tool calls
 - [2026-07-13 13:53:03] chore(telemetry): update migration scripts for task run state tracking
 - [2026-07-13 14:36:18] perf(subagents): add health check endpoint for distributed worker nodes
+- [2026-07-13 16:39:30] chore(worker): document multi-agent communication protocol and message bus

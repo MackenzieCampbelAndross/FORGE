@@ -10,3 +10,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-07-13 11:46:45] perf(dag): implement async task DAG scheduler with dependency resolution
 - [2026-07-13 13:37:35] fix(subagents): add structured telemetry event logging for agent tool calls
+- [2026-07-13 13:53:03] chore(telemetry): update migration scripts for task run state tracking

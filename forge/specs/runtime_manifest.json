@@ -3,6 +3,6 @@
   "maxConcurrentAgents": 16,
   "defaultTimeoutSeconds": 120,
   "telemetryLevel": "DEBUG",
-  "last_iteration": "v12",
-  "updated_at": "2026-07-13 11:44:54"
+  "last_iteration": "v14",
+  "updated_at": "2026-07-13 12:01:00"
 }

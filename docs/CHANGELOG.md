@@ -20,3 +20,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-07-14 13:28:31] perf(orchestrator): document multi-agent communication protocol and message bus
 - [2026-07-14 16:03:11] chore(registry): implement exponential backoff with jitter on API rate limit error
+- [2026-07-14 17:00:28] fix(subagents): document multi-agent communication protocol and message bus

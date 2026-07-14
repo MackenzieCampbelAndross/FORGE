@@ -15,3 +15,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-13 16:39:30] chore(worker): document multi-agent communication protocol and message bus
 - [2026-07-13 17:18:03] chore(telemetry): decouple workflow step execution from state persistence layer
 - [2026-07-13 19:36:53] fix(dag): reduce message serialization overhead in agent event stream
+- [2026-07-14 09:39:53] fix(subagents): implement vector-backed long-term episodic memory for agents

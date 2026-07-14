@@ -9,3 +9,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-07-14 16:48:13**: `docs(dag): reduce message serialization overhead in agent event stream`
   *Updated specifications and documentation details.*
+- **2026-07-14 19:14:29**: `docs(memory): implement vector-backed long-term episodic memory for agents`
+  *Updated specifications and documentation details.*

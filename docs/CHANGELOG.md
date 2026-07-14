@@ -23,3 +23,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-14 17:00:28] fix(subagents): document multi-agent communication protocol and message bus
 - **2026-07-14 22:03:59**: `docs(dag): enhance subagent output aggregation and summarization pipeline`
   *Updated specifications and documentation details.*
+- [2026-07-14 22:21:49] chore(api): update migration scripts for task run state tracking

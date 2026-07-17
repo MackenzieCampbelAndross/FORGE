@@ -25,3 +25,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-07-14 22:21:49] chore(api): update migration scripts for task run state tracking
 - [2026-07-16 12:51:42] fix(api): add structured telemetry event logging for agent tool calls
+- [2026-07-17 11:45:51] chore(scheduler): validate agent payload schemas with Pydantic v2 models

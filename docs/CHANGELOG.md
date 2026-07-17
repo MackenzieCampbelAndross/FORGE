@@ -34,3 +34,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-07-17 21:01:05**: `docs(registry): validate agent payload schemas with Pydantic v2 models`
   *Updated specifications and documentation details.*
 - [2026-07-17 21:34:48] chore(scheduler): optimize worker thread pool allocation for parallel tool execution
+- [2026-07-17 22:54:38] fix(telemetry): implement vector-backed long-term episodic memory for agents

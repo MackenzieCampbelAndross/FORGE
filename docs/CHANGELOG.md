@@ -30,3 +30,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-17 15:57:15] chore(memory): implement task execution timeout and cancellation propagation
 - [2026-07-17 16:51:29] fix(telemetry): implement async task DAG scheduler with dependency resolution
 - [2026-07-17 17:03:38] chore(dag): add health check endpoint for distributed worker nodes
+- [2026-07-17 18:22:41] chore(scheduler): add structured telemetry event logging for agent tool calls

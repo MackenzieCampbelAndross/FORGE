@@ -35,3 +35,5 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-07-17 21:34:48] chore(scheduler): optimize worker thread pool allocation for parallel tool execution
 - [2026-07-17 22:54:38] fix(telemetry): implement vector-backed long-term episodic memory for agents
+- **2026-07-21 19:22:40**: `docs(registry): implement vector-backed long-term episodic memory for agents`
+  *Updated specifications and documentation details.*

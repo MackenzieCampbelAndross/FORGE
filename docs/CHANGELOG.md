@@ -37,3 +37,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-17 22:54:38] fix(telemetry): implement vector-backed long-term episodic memory for agents
 - **2026-07-21 19:22:40**: `docs(registry): implement vector-backed long-term episodic memory for agents`
   *Updated specifications and documentation details.*
+- [2026-07-22 10:00:59] fix(api): validate agent payload schemas with Pydantic v2 models

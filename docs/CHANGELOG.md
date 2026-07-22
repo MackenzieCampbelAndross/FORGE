@@ -39,3 +39,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-07-22 10:00:59] fix(api): validate agent payload schemas with Pydantic v2 models
 - [2026-07-22 11:19:05] perf(subagents): reduce message serialization overhead in agent event stream
+- [2026-07-22 14:38:49] perf(orchestrator): handle race condition during concurrent subagent dispatch

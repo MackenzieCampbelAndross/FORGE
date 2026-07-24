@@ -47,3 +47,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-22 19:06:09] fix(api): validate agent payload schemas with Pydantic v2 models
 - [2026-07-24 09:52:07] chore(registry): update migration scripts for task run state tracking
 - [2026-07-24 10:18:02] perf(api): document multi-agent communication protocol and message bus
+- [2026-07-24 10:28:04] fix(subagents): handle race condition during concurrent subagent dispatch

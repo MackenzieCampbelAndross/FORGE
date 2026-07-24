@@ -52,3 +52,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-07-24 12:53:05**: `docs(orchestrator): add structured telemetry event logging for agent tool calls`
   *Updated specifications and documentation details.*
 - [2026-07-24 13:29:33] fix(worker): add health check endpoint for distributed worker nodes
+- [2026-07-24 15:18:41] perf(telemetry): validate agent payload schemas with Pydantic v2 models

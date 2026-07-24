@@ -13,3 +13,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-07-22 14:42:14**: `docs(orchestrator): decouple workflow step execution from state persistence layer`
   *Updated specifications and documentation details.*
+- **2026-07-24 14:32:42**: `docs(subagents): implement async task DAG scheduler with dependency resolution`
+  *Updated specifications and documentation details.*

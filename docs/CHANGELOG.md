@@ -45,3 +45,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-07-22 18:00:02**: `docs(subagents): implement async task DAG scheduler with dependency resolution`
   *Updated specifications and documentation details.*
 - [2026-07-22 19:06:09] fix(api): validate agent payload schemas with Pydantic v2 models
+- [2026-07-24 09:52:07] chore(registry): update migration scripts for task run state tracking

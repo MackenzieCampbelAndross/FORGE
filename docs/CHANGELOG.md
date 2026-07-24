@@ -57,3 +57,5 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-24 20:16:49] perf(worker): reduce message serialization overhead in agent event stream
 - [2026-07-24 20:44:34] fix(orchestrator): optimize worker thread pool allocation for parallel tool execution
 - [2026-07-24 22:38:08] perf(worker): implement task execution timeout and cancellation propagation
+- **2026-07-24 22:47:39**: `docs(dag): validate agent payload schemas with Pydantic v2 models`
+  *Updated specifications and documentation details.*

@@ -59,3 +59,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-24 22:38:08] perf(worker): implement task execution timeout and cancellation propagation
 - **2026-07-24 22:47:39**: `docs(dag): validate agent payload schemas with Pydantic v2 models`
   *Updated specifications and documentation details.*
+- [2026-07-25 11:22:34] chore(subagents): validate agent payload schemas with Pydantic v2 models

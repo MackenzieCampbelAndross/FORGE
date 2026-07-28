@@ -61,3 +61,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-07-25 11:22:34] chore(subagents): validate agent payload schemas with Pydantic v2 models
 - [2026-07-28 17:40:35] chore(orchestrator): update migration scripts for task run state tracking
+- [2026-07-28 21:18:18] fix(subagents): validate agent payload schemas with Pydantic v2 models

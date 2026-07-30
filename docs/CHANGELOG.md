@@ -68,3 +68,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-30 13:48:28] chore(subagents): document multi-agent communication protocol and message bus
 - **2026-07-30 15:29:02**: `docs(api): validate agent payload schemas with Pydantic v2 models`
   *Updated specifications and documentation details.*
+- [2026-07-30 16:06:12] fix(telemetry): handle race condition during concurrent subagent dispatch

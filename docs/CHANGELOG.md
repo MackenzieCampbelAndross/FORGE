@@ -72,3 +72,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-30 17:02:42] chore(worker): update migration scripts for task run state tracking
 - **2026-07-30 18:08:41**: `docs(dag): add structured telemetry event logging for agent tool calls`
   *Updated specifications and documentation details.*
+- [2026-07-30 20:22:08] chore(subagents): handle race condition during concurrent subagent dispatch

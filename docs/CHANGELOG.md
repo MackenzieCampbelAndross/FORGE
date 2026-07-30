@@ -65,3 +65,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-29 20:14:05] perf(api): implement async task DAG scheduler with dependency resolution
 - [2026-07-30 11:53:01] perf(registry): update migration scripts for task run state tracking
 - [2026-07-30 13:30:47] fix(orchestrator): implement task execution timeout and cancellation propagation
+- [2026-07-30 13:48:28] chore(subagents): document multi-agent communication protocol and message bus

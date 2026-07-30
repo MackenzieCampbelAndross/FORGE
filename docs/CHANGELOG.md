@@ -73,3 +73,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-07-30 18:08:41**: `docs(dag): add structured telemetry event logging for agent tool calls`
   *Updated specifications and documentation details.*
 - [2026-07-30 20:22:08] chore(subagents): handle race condition during concurrent subagent dispatch
+- [2026-07-30 20:51:19] perf(api): reduce message serialization overhead in agent event stream

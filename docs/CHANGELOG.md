@@ -76,3 +76,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-07-30 20:51:19] perf(api): reduce message serialization overhead in agent event stream
 - [2026-07-30 21:10:46] perf(worker): enhance subagent output aggregation and summarization pipeline
 - [2026-08-01 14:08:21] fix(telemetry): reduce message serialization overhead in agent event stream
+- [2026-08-01 19:47:43] fix(worker): validate agent payload schemas with Pydantic v2 models

@@ -86,3 +86,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-08-04 16:19:06] chore(subagents): reduce message serialization overhead in agent event stream
 - [2026-08-04 17:05:31] chore(subagents): optimize worker thread pool allocation for parallel tool execution
+- [2026-08-04 21:12:24] chore(telemetry): handle race condition during concurrent subagent dispatch

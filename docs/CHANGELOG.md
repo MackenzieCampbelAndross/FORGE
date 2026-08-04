@@ -84,3 +84,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-04 14:46:03] fix(telemetry): dynamic registration for custom tool schemas
 - **2026-08-04 16:16:08**: `docs(registry): dynamic registration for custom tool schemas`
   *Updated specifications and documentation details.*
+- [2026-08-04 16:19:06] chore(subagents): reduce message serialization overhead in agent event stream

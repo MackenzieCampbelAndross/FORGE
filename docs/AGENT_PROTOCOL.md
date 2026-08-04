@@ -9,3 +9,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-07-31 14:41:09**: `docs(subagents): handle race condition during concurrent subagent dispatch`
   *Updated specifications and documentation details.*
+- **2026-08-04 17:30:06**: `docs(api): document multi-agent communication protocol and message bus`
+  *Updated specifications and documentation details.*

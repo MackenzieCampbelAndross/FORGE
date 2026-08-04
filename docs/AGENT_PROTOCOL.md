@@ -11,3 +11,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-08-04 17:30:06**: `docs(api): document multi-agent communication protocol and message bus`
   *Updated specifications and documentation details.*
+- **2026-08-04 17:41:18**: `docs(registry): decouple workflow step execution from state persistence layer`
+  *Updated specifications and documentation details.*

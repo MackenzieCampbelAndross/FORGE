@@ -15,3 +15,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-07-24 14:32:42**: `docs(subagents): implement async task DAG scheduler with dependency resolution`
   *Updated specifications and documentation details.*
+- **2026-08-04 15:44:23**: `docs(worker): dynamic registration for custom tool schemas`
+  *Updated specifications and documentation details.*

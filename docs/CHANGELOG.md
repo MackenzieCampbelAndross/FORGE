@@ -85,3 +85,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-08-04 16:16:08**: `docs(registry): dynamic registration for custom tool schemas`
   *Updated specifications and documentation details.*
 - [2026-08-04 16:19:06] chore(subagents): reduce message serialization overhead in agent event stream
+- [2026-08-04 17:05:31] chore(subagents): optimize worker thread pool allocation for parallel tool execution

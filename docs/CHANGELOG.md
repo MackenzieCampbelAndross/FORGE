@@ -89,3 +89,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-04 21:12:24] chore(telemetry): handle race condition during concurrent subagent dispatch
 - [2026-08-04 22:36:22] perf(telemetry): add health check endpoint for distributed worker nodes
 - [2026-08-04 22:59:50] fix(subagents): decouple workflow step execution from state persistence layer
+- [2026-08-05 19:51:25] perf(api): document multi-agent communication protocol and message bus

@@ -101,3 +101,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-07 13:51:38] fix(subagents): dynamic registration for custom tool schemas
 - [2026-08-07 14:27:34] fix(telemetry): update migration scripts for task run state tracking
 - [2026-08-07 14:31:55] chore(telemetry): add structured telemetry event logging for agent tool calls
+- [2026-08-07 16:11:21] perf(scheduler): validate agent payload schemas with Pydantic v2 models

@@ -95,3 +95,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-08-07 09:46:16] chore(memory): handle race condition during concurrent subagent dispatch
 - [2026-08-07 10:58:45] perf(api): decouple workflow step execution from state persistence layer
+- [2026-08-07 11:04:24] chore(orchestrator): implement async task DAG scheduler with dependency resolution

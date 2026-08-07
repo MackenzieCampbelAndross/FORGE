@@ -98,3 +98,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-07 11:04:24] chore(orchestrator): implement async task DAG scheduler with dependency resolution
 - [2026-08-07 11:12:11] chore(api): handle race condition during concurrent subagent dispatch
 - [2026-08-07 13:44:46] perf(telemetry): dynamic registration for custom tool schemas
+- [2026-08-07 13:51:38] fix(subagents): dynamic registration for custom tool schemas

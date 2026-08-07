@@ -19,3 +19,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-08-07 13:50:59**: `docs(subagents): add structured telemetry event logging for agent tool calls`
   *Updated specifications and documentation details.*
+- **2026-08-07 17:43:23**: `docs(orchestrator): reduce message serialization overhead in agent event stream`
+  *Updated specifications and documentation details.*

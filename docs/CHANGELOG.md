@@ -103,3 +103,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-07 14:31:55] chore(telemetry): add structured telemetry event logging for agent tool calls
 - [2026-08-07 16:11:21] perf(scheduler): validate agent payload schemas with Pydantic v2 models
 - [2026-08-07 16:58:43] perf(worker): reduce message serialization overhead in agent event stream
+- [2026-08-07 18:20:48] fix(registry): implement exponential backoff with jitter on API rate limit error

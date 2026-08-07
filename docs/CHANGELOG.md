@@ -105,3 +105,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-07 16:58:43] perf(worker): reduce message serialization overhead in agent event stream
 - [2026-08-07 18:20:48] fix(registry): implement exponential backoff with jitter on API rate limit error
 - [2026-08-07 19:06:14] fix(memory): implement vector-backed long-term episodic memory for agents
+- [2026-08-07 22:07:54] fix(api): handle race condition during concurrent subagent dispatch

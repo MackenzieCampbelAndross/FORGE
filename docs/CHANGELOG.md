@@ -94,3 +94,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-08-07 09:45:43**: `docs(registry): document multi-agent communication protocol and message bus`
   *Updated specifications and documentation details.*
 - [2026-08-07 09:46:16] chore(memory): handle race condition during concurrent subagent dispatch
+- [2026-08-07 10:58:45] perf(api): decouple workflow step execution from state persistence layer

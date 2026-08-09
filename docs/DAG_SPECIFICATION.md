@@ -21,3 +21,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-08-07 17:43:23**: `docs(orchestrator): reduce message serialization overhead in agent event stream`
   *Updated specifications and documentation details.*
+- **2026-08-09 20:45:39**: `docs(orchestrator): add health check endpoint for distributed worker nodes`
+  *Updated specifications and documentation details.*

@@ -107,3 +107,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-07 19:06:14] fix(memory): implement vector-backed long-term episodic memory for agents
 - [2026-08-07 22:07:54] fix(api): handle race condition during concurrent subagent dispatch
 - [2026-08-07 22:44:48] perf(orchestrator): add health check endpoint for distributed worker nodes
+- [2026-08-11 12:13:11] perf(scheduler): validate agent payload schemas with Pydantic v2 models

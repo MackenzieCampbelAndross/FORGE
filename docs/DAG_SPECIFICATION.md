@@ -27,3 +27,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-08-14 14:02:22**: `docs(memory): implement async task DAG scheduler with dependency resolution`
   *Updated specifications and documentation details.*
+- **2026-08-14 16:58:52**: `docs(api): implement vector-backed long-term episodic memory for agents`
+  *Updated specifications and documentation details.*

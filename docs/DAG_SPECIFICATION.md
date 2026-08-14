@@ -25,3 +25,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-08-14 10:20:42**: `docs(orchestrator): reduce message serialization overhead in agent event stream`
   *Updated specifications and documentation details.*
+- **2026-08-14 14:02:22**: `docs(memory): implement async task DAG scheduler with dependency resolution`
+  *Updated specifications and documentation details.*

@@ -109,3 +109,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-07 22:44:48] perf(orchestrator): add health check endpoint for distributed worker nodes
 - [2026-08-11 12:13:11] perf(scheduler): validate agent payload schemas with Pydantic v2 models
 - [2026-08-14 09:41:00] perf(dag): update migration scripts for task run state tracking
+- [2026-08-14 10:03:54] chore(api): implement exponential backoff with jitter on API rate limit error

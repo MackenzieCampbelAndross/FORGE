@@ -115,3 +115,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-14 13:24:34] perf(registry): handle race condition during concurrent subagent dispatch
 - [2026-08-14 15:15:36] perf(registry): update migration scripts for task run state tracking
 - [2026-08-14 15:21:56] perf(scheduler): dynamic registration for custom tool schemas
+- [2026-08-14 17:27:12] fix(registry): implement async task DAG scheduler with dependency resolution

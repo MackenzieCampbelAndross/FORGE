@@ -13,3 +13,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-08-04 17:41:18**: `docs(registry): decouple workflow step execution from state persistence layer`
   *Updated specifications and documentation details.*
+- **2026-08-14 12:29:20**: `docs(telemetry): implement async task DAG scheduler with dependency resolution`
+  *Updated specifications and documentation details.*

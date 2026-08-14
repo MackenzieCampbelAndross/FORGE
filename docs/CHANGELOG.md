@@ -114,3 +114,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-14 13:20:29] perf(dag): validate agent payload schemas with Pydantic v2 models
 - [2026-08-14 13:24:34] perf(registry): handle race condition during concurrent subagent dispatch
 - [2026-08-14 15:15:36] perf(registry): update migration scripts for task run state tracking
+- [2026-08-14 15:21:56] perf(scheduler): dynamic registration for custom tool schemas

@@ -118,3 +118,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-14 17:27:12] fix(registry): implement async task DAG scheduler with dependency resolution
 - [2026-08-14 17:52:22] perf(memory): add structured telemetry event logging for agent tool calls
 - [2026-08-14 18:13:38] fix(orchestrator): optimize worker thread pool allocation for parallel tool execution
+- [2026-08-14 18:29:53] fix(memory): reduce message serialization overhead in agent event stream

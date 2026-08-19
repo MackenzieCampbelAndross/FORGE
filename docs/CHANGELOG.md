@@ -122,3 +122,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-14 20:04:02] chore(dag): implement exponential backoff with jitter on API rate limit error
 - [2026-08-18 18:12:28] perf(subagents): handle race condition during concurrent subagent dispatch
 - [2026-08-19 14:17:34] perf(registry): implement vector-backed long-term episodic memory for agents
+- [2026-08-19 16:24:16] fix(worker): decouple workflow step execution from state persistence layer

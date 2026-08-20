@@ -29,3 +29,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-08-14 16:58:52**: `docs(api): implement vector-backed long-term episodic memory for agents`
   *Updated specifications and documentation details.*
+- **2026-08-20 15:12:35**: `docs(registry): dynamic registration for custom tool schemas`
+  *Updated specifications and documentation details.*

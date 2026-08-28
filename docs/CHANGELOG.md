@@ -133,3 +133,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-28 17:42:49] fix(subagents): document multi-agent communication protocol and message bus
 - [2026-08-28 17:48:27] perf(subagents): handle race condition during concurrent subagent dispatch
 - [2026-08-28 21:44:15] chore(telemetry): add health check endpoint for distributed worker nodes
+- [2026-08-28 22:33:18] perf(registry): validate agent payload schemas with Pydantic v2 models

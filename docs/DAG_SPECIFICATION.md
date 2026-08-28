@@ -31,3 +31,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-08-20 15:12:35**: `docs(registry): dynamic registration for custom tool schemas`
   *Updated specifications and documentation details.*
+- **2026-08-28 12:19:30**: `docs(registry): validate agent payload schemas with Pydantic v2 models`
+  *Updated specifications and documentation details.*

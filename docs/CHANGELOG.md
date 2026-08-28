@@ -132,3 +132,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-28 17:04:03] fix(memory): implement async task DAG scheduler with dependency resolution
 - [2026-08-28 17:42:49] fix(subagents): document multi-agent communication protocol and message bus
 - [2026-08-28 17:48:27] perf(subagents): handle race condition during concurrent subagent dispatch
+- [2026-08-28 21:44:15] chore(telemetry): add health check endpoint for distributed worker nodes

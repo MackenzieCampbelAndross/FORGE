@@ -130,3 +130,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-08-28 14:43:42**: `docs(telemetry): update migration scripts for task run state tracking`
   *Updated specifications and documentation details.*
 - [2026-08-28 17:04:03] fix(memory): implement async task DAG scheduler with dependency resolution
+- [2026-08-28 17:42:49] fix(subagents): document multi-agent communication protocol and message bus

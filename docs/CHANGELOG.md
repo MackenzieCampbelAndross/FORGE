@@ -126,3 +126,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-26 15:55:04] perf(worker): reduce message serialization overhead in agent event stream
 - [2026-08-26 20:49:08] perf(memory): reduce message serialization overhead in agent event stream
 - [2026-08-28 11:59:19] chore(api): document multi-agent communication protocol and message bus
+- [2026-08-28 12:36:12] chore(telemetry): reduce message serialization overhead in agent event stream

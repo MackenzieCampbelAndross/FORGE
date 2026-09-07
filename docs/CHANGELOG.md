@@ -135,3 +135,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-28 21:44:15] chore(telemetry): add health check endpoint for distributed worker nodes
 - [2026-08-28 22:33:18] perf(registry): validate agent payload schemas with Pydantic v2 models
 - [2026-09-07 09:43:55] chore(api): dynamic registration for custom tool schemas
+- [2026-09-07 21:07:48] chore(scheduler): implement exponential backoff with jitter on API rate limit error

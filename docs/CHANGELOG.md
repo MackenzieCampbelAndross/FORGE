@@ -139,3 +139,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-09-24 09:51:37**: `docs(subagents): implement vector-backed long-term episodic memory for agents`
   *Updated specifications and documentation details.*
 - [2026-09-24 13:12:55] perf(subagents): implement exponential backoff with jitter on API rate limit error
+- [2026-09-24 17:49:41] perf(worker): implement async task DAG scheduler with dependency resolution

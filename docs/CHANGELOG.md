@@ -136,3 +136,5 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-08-28 22:33:18] perf(registry): validate agent payload schemas with Pydantic v2 models
 - [2026-09-07 09:43:55] chore(api): dynamic registration for custom tool schemas
 - [2026-09-07 21:07:48] chore(scheduler): implement exponential backoff with jitter on API rate limit error
+- **2026-09-24 09:51:37**: `docs(subagents): implement vector-backed long-term episodic memory for agents`
+  *Updated specifications and documentation details.*

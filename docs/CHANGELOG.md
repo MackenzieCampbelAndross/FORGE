@@ -141,3 +141,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-09-24 13:12:55] perf(subagents): implement exponential backoff with jitter on API rate limit error
 - [2026-09-24 17:49:41] perf(worker): implement async task DAG scheduler with dependency resolution
 - [2026-09-25 09:33:01] chore(telemetry): implement task execution timeout and cancellation propagation
+- [2026-09-25 20:15:09] fix(subagents): implement task execution timeout and cancellation propagation

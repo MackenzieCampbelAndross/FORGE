@@ -17,3 +17,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-08-14 14:26:33**: `docs(registry): validate agent payload schemas with Pydantic v2 models`
   *Updated specifications and documentation details.*
+- **2026-09-28 12:43:13**: `docs(registry): reduce message serialization overhead in agent event stream`
+  *Updated specifications and documentation details.*

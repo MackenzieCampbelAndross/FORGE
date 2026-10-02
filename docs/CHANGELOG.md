@@ -145,3 +145,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-09-28 20:20:40] chore(scheduler): implement exponential backoff with jitter on API rate limit error
 - [2026-09-28 20:44:35] fix(registry): add structured telemetry event logging for agent tool calls
 - [2026-10-02 09:31:11] perf(subagents): add health check endpoint for distributed worker nodes
+- [2026-10-02 13:29:25] fix(subagents): add structured telemetry event logging for agent tool calls

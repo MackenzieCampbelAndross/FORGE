@@ -148,3 +148,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-10-02 13:29:25] fix(subagents): add structured telemetry event logging for agent tool calls
 - [2026-10-02 20:52:15] chore(dag): handle race condition during concurrent subagent dispatch
 - [2026-10-12 10:31:52] fix(memory): add structured telemetry event logging for agent tool calls
+- [2026-10-12 20:25:36] perf(registry): optimize worker thread pool allocation for parallel tool execution

@@ -161,3 +161,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-11-02 12:53:21] perf(worker): implement async task DAG scheduler with dependency resolution
 - [2026-11-02 14:02:22] chore(subagents): update migration scripts for task run state tracking
 - [2026-11-02 14:08:43] chore(registry): decouple workflow step execution from state persistence layer
+- [2026-11-02 16:06:56] fix(memory): add health check endpoint for distributed worker nodes

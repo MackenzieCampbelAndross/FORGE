@@ -155,3 +155,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - **2026-11-02 10:39:44**: `docs(registry): reduce message serialization overhead in agent event stream`
   *Updated specifications and documentation details.*
+- [2026-11-02 11:07:07] perf(telemetry): add health check endpoint for distributed worker nodes

@@ -21,3 +21,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-11-02 20:21:20**: `docs(registry): decouple workflow step execution from state persistence layer`
   *Updated specifications and documentation details.*
+- **2026-11-02 21:10:29**: `docs(memory): implement vector-backed long-term episodic memory for agents`
+  *Updated specifications and documentation details.*

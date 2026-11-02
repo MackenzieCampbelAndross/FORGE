@@ -160,3 +160,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-11-02 11:51:07] perf(telemetry): implement exponential backoff with jitter on API rate limit error
 - [2026-11-02 12:53:21] perf(worker): implement async task DAG scheduler with dependency resolution
 - [2026-11-02 14:02:22] chore(subagents): update migration scripts for task run state tracking
+- [2026-11-02 14:08:43] chore(registry): decouple workflow step execution from state persistence layer

@@ -153,3 +153,5 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - **2026-10-14 16:17:31**: `docs(dag): implement async task DAG scheduler with dependency resolution`
   *Updated specifications and documentation details.*
+- **2026-11-02 10:39:44**: `docs(registry): reduce message serialization overhead in agent event stream`
+  *Updated specifications and documentation details.*

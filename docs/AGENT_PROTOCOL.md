@@ -19,3 +19,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-09-28 12:43:13**: `docs(registry): reduce message serialization overhead in agent event stream`
   *Updated specifications and documentation details.*
+- **2026-11-02 20:21:20**: `docs(registry): decouple workflow step execution from state persistence layer`
+  *Updated specifications and documentation details.*

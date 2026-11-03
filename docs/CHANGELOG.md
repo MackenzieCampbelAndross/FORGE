@@ -166,3 +166,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-11-02 16:22:37] chore(scheduler): reduce message serialization overhead in agent event stream
 - [2026-11-02 21:06:15] perf(subagents): add structured telemetry event logging for agent tool calls
 - [2026-11-02 22:10:56] fix(dag): implement vector-backed long-term episodic memory for agents
+- [2026-11-03 16:17:21] perf(dag): optimize worker thread pool allocation for parallel tool execution

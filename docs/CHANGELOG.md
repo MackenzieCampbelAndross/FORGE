@@ -168,3 +168,5 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-11-02 22:10:56] fix(dag): implement vector-backed long-term episodic memory for agents
 - [2026-11-03 16:17:21] perf(dag): optimize worker thread pool allocation for parallel tool execution
 - [2026-11-04 20:31:02] perf(memory): reduce message serialization overhead in agent event stream
+- **2026-11-05 17:07:47**: `docs(memory): decouple workflow step execution from state persistence layer`
+  *Updated specifications and documentation details.*

@@ -171,3 +171,5 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-11-05 17:07:47**: `docs(memory): decouple workflow step execution from state persistence layer`
   *Updated specifications and documentation details.*
 - [2026-11-09 16:28:46] chore(api): implement exponential backoff with jitter on API rate limit error
+- **2026-11-09 19:49:03**: `docs(dag): document multi-agent communication protocol and message bus`
+  *Updated specifications and documentation details.*

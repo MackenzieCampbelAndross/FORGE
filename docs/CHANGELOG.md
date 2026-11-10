@@ -174,3 +174,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-11-09 19:49:03**: `docs(dag): document multi-agent communication protocol and message bus`
   *Updated specifications and documentation details.*
 - [2026-11-10 16:00:21] fix(registry): implement task execution timeout and cancellation propagation
+- [2026-11-10 20:38:40] perf(subagents): reduce message serialization overhead in agent event stream

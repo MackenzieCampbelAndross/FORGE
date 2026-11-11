@@ -183,3 +183,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-11-11 18:03:25] chore(api): decouple workflow step execution from state persistence layer
 - [2026-11-11 18:46:46] perf(registry): dynamic registration for custom tool schemas
+- [2026-11-11 19:43:43] chore(orchestrator): implement vector-backed long-term episodic memory for agents

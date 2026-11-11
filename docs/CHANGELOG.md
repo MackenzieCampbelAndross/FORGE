@@ -185,3 +185,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-11-11 18:46:46] perf(registry): dynamic registration for custom tool schemas
 - [2026-11-11 19:43:43] chore(orchestrator): implement vector-backed long-term episodic memory for agents
 - [2026-11-11 22:12:20] fix(subagents): handle race condition during concurrent subagent dispatch
+- [2026-11-11 22:35:07] chore(orchestrator): add health check endpoint for distributed worker nodes

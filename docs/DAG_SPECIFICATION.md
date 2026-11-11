@@ -33,3 +33,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-08-28 12:19:30**: `docs(registry): validate agent payload schemas with Pydantic v2 models`
   *Updated specifications and documentation details.*
+- **2026-11-11 11:14:49**: `docs(telemetry): reduce message serialization overhead in agent event stream`
+  *Updated specifications and documentation details.*

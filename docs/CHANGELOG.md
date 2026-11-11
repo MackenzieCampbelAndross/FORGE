@@ -181,3 +181,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-11-11 15:39:16] fix(api): handle race condition during concurrent subagent dispatch
 - **2026-11-11 17:13:10**: `docs(orchestrator): reduce message serialization overhead in agent event stream`
   *Updated specifications and documentation details.*
+- [2026-11-11 18:03:25] chore(api): decouple workflow step execution from state persistence layer

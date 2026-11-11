@@ -35,3 +35,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-11-11 11:14:49**: `docs(telemetry): reduce message serialization overhead in agent event stream`
   *Updated specifications and documentation details.*
+- **2026-11-11 17:42:22**: `docs(registry): document multi-agent communication protocol and message bus`
+  *Updated specifications and documentation details.*

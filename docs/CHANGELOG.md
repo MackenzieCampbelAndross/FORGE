@@ -175,3 +175,5 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
   *Updated specifications and documentation details.*
 - [2026-11-10 16:00:21] fix(registry): implement task execution timeout and cancellation propagation
 - [2026-11-10 20:38:40] perf(subagents): reduce message serialization overhead in agent event stream
+- **2026-11-11 14:26:56**: `docs(worker): decouple workflow step execution from state persistence layer`
+  *Updated specifications and documentation details.*

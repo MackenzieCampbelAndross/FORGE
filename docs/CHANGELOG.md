@@ -178,3 +178,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - **2026-11-11 14:26:56**: `docs(worker): decouple workflow step execution from state persistence layer`
   *Updated specifications and documentation details.*
 - [2026-11-11 14:44:04] perf(scheduler): enhance subagent output aggregation and summarization pipeline
+- [2026-11-11 15:39:16] fix(api): handle race condition during concurrent subagent dispatch

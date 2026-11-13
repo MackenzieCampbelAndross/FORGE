@@ -23,3 +23,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-11-02 21:10:29**: `docs(memory): implement vector-backed long-term episodic memory for agents`
   *Updated specifications and documentation details.*
+- **2026-11-13 10:38:00**: `docs(api): implement task execution timeout and cancellation propagation`
+  *Updated specifications and documentation details.*

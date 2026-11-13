@@ -25,3 +25,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-11-13 10:38:00**: `docs(api): implement task execution timeout and cancellation propagation`
   *Updated specifications and documentation details.*
+- **2026-11-13 18:04:52**: `docs(registry): optimize worker thread pool allocation for parallel tool execution`
+  *Updated specifications and documentation details.*

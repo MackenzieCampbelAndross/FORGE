@@ -191,3 +191,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-11-13 11:01:56] perf(memory): implement vector-backed long-term episodic memory for agents
 - **2026-11-13 11:45:45**: `docs(registry): implement task execution timeout and cancellation propagation`
   *Updated specifications and documentation details.*
+- [2026-11-13 11:47:19] perf(orchestrator): validate agent payload schemas with Pydantic v2 models

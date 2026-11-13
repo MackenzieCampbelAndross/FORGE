@@ -37,3 +37,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-11-11 17:42:22**: `docs(registry): document multi-agent communication protocol and message bus`
   *Updated specifications and documentation details.*
+- **2026-11-13 16:19:43**: `docs(memory): optimize worker thread pool allocation for parallel tool execution`
+  *Updated specifications and documentation details.*

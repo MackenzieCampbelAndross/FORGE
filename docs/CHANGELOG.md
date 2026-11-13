@@ -187,3 +187,4 @@ Multi-agent orchestration, async task DAGs, and memory persistence releases.
 - [2026-11-11 22:12:20] fix(subagents): handle race condition during concurrent subagent dispatch
 - [2026-11-11 22:35:07] chore(orchestrator): add health check endpoint for distributed worker nodes
 - [2026-11-12 15:43:46] chore(orchestrator): handle race condition during concurrent subagent dispatch
+- [2026-11-13 09:45:40] chore(registry): implement task execution timeout and cancellation propagation

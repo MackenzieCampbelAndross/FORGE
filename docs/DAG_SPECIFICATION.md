@@ -43,3 +43,5 @@ Cyclic dependency prevention, priority queues, and backpressure handling.
   *Updated specifications and documentation details.*
 - **2026-11-16 15:10:10**: `docs(subagents): enhance subagent output aggregation and summarization pipeline`
   *Updated specifications and documentation details.*
+- **2026-11-16 18:21:03**: `docs(orchestrator): validate agent payload schemas with Pydantic v2 models`
+  *Updated specifications and documentation details.*

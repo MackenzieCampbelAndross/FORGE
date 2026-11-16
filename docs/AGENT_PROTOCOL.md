@@ -27,3 +27,5 @@ Inter-agent message schemas, structured payloads, and tool execution isolation.
   *Updated specifications and documentation details.*
 - **2026-11-13 18:04:52**: `docs(registry): optimize worker thread pool allocation for parallel tool execution`
   *Updated specifications and documentation details.*
+- **2026-11-16 10:41:41**: `docs(dag): reduce message serialization overhead in agent event stream`
+  *Updated specifications and documentation details.*

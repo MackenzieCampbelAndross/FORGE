@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  forge-api:
+    build: .
+    container_name: forge-api
+    ports:
+      - "8000:8000"
+    environment:
+      - FORGE_MODEL_PROVIDER=${FORGE_MODEL_PROVIDER:-mock}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - FORGE_DATABASE_URL=postgresql+psycopg2://forge:forge@postgres:5432/forge_db
+      - FORGE_REDIS_URL=redis://redis:6379/0
+      - FORGE_LOG_LEVEL=INFO
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./mlruns:/app/mlruns
+      - ./data:/app/data
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: forge-postgres
+    environment:
+      POSTGRES_USER: forge
+      POSTGRES_PASSWORD: forge
+      POSTGRES_DB: forge_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U forge -d forge_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: forge-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+  redis_data:

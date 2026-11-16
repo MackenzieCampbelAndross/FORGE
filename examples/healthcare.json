@@ -1,0 +1,12 @@
+{
+  "project_id": "PRJ-HEALTHCARE-001",
+  "name": "Cloud Native EHR Platform",
+  "objective": "Build a scalable, HIPAA-compliant healthcare data exchange platform processing HL7/FHIR clinical records with real-time audit logging and role-based physician access.",
+  "domain": "Healthcare Systems",
+  "context": "Enterprise regional hospital network serving 500,000 patients with strict regulatory privacy constraints.",
+  "constraints": [
+    "HIPAA Title II compliance with cryptographic audit trail",
+    "Must run on Kubernetes containerized cloud infrastructure",
+    "P99 query response latency under 200ms for emergency room vitals"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "example_id": "EX-AUTONOMOUS-VEHICLE-001",
+  "name": "Fleet-Scale Autonomous Vehicle Telemetry Ingestion Platform",
+  "domain": "IoT / Automotive / Streaming",
+  "objective": "Design a high-throughput, fault-tolerant telemetry ingestion and safety analytics platform for a global fleet of 1,000,000 autonomous vehicles generating sensor feeds (LiDAR, radar, CAN-bus, camera metadata) at 10Hz.",
+  "constraints": [
+    "Peak ingestion capacity of 10,000,000 messages/second with p99 ingest latency under 20ms",
+    "ISO 26262 ASIL D safety compliance and immutable audit logging",
+    "Zero data loss guarantee for critical collision avoidance telemetry packets",
+    "Multi-cloud regional deployment with automatic cellular failover",
+    "End-to-end encryption using vehicle-embedded Hardware Security Modules (HSM)"
+  ],
+  "components": [
+    {
+      "component_id": "COMP-EDGE-GW",
+      "name": "Cellular Edge Telemetry Gateway",
+      "technology": "Rust / eBPF / Envoy Gateway",
+      "responsibility": "Terminates mTLS cellular connections from vehicle telematics control units (TCU), verifies HSM client certificates, and unpacks Protobuf telemetry packets.",
+      "interfaces": ["MQTT over TLS 1.3", "QUIC / HTTP/3 Ingress"]
+    },
+    {
+      "component_id": "COMP-STREAM-BUS",
+      "name": "Distributed Telemetry Ingestion Buffer",
+      "technology": "Apache Kafka (KRaft mode) on NVMe storage",
+      "responsibility": "Partitioned event streaming buffer partitioned by geographic tile and vehicle VIN with replication factor of 3 across AZs.",
+      "interfaces": ["Kafka Protocol 3.x"]
+    },
+    {
+      "component_id": "COMP-REALTIME-ANALYTICS",
+      "name": "Real-Time Anomaly & Collision Processing Engine",
+      "technology": "Apache Flink on Kubernetes",
+      "responsibility": "Stateful sliding-window analysis for sudden deceleration, LiDAR obstacle clustering, and real-time fleet collision hazard alerting.",
+      "interfaces": ["Flink DataStream API"]
+    },
+    {
+      "component_id": "COMP-WARM-STORE",
+      "name": "Operational Time-Series Telemetry Store",
+      "technology": "TimescaleDB / PostgreSQL Cluster",
+      "responsibility": "Provides 30-day indexed time-series queries for fleet operators, active vehicle diagnostic monitoring, and dispatch optimization.",
+      "interfaces": ["SQL / PostgreSQL wire protocol"]
+    },
+    {
+      "component_id": "COMP-COLD-LAKE",
+      "name": "Petabyte-Scale Autonomous Perception Lakehouse",
+      "technology": "Apache Iceberg / Parquet on AWS S3 / Cloudflare R2",
+      "responsibility": "Immutable long-term retention of raw driving perception data for autonomous driving model retraining and regulatory compliance.",
+      "interfaces": ["S3 REST API / Trino"]
+    }
+  ],
+  "security_threats": [
+    "SPOOFING: Adversary transmits forged CAN-bus collision telemetry to trigger emergency braking",
+    "TAMPERING: Man-in-the-middle manipulation of cellular base station firmware update over-the-air (OTA)",
+    "DENIAL_OF_SERVICE: Cellular cell tower saturation jamming real-time telemetry transmissions"
+  ]
+}

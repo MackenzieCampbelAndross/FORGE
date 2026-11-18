@@ -491,15 +491,59 @@ class GeminiProvider(ModelProvider):
             ) from e
 
 
-def get_model_provider(provider_type: str | None = None) -> ModelProvider:
-    """Factory to retrieve configured model provider."""
-    p_type = provider_type or settings.model_provider
-    if p_type.lower() == "gemini":
+class FallbackModelProvider(ModelProvider):
+    """Resilient provider that automatically falls back to secondary provider upon failure."""
+
+    def __init__(self, primary: ModelProvider, secondary: ModelProvider):
+        super().__init__(model_name=f"{primary.model_name}+{secondary.model_name}")
+        self.primary = primary
+        self.secondary = secondary
+
+    def generate_text(self, prompt: str, system_instruction: str | None = None) -> ProviderResponse:
         try:
-            return GeminiProvider()
+            return self.primary.generate_text(prompt, system_instruction=system_instruction)
+        except Exception as e:
+            logger.warning(
+                f"[FallbackModelProvider] Primary {self.primary.model_name} failed ({e}). "
+                f"Failing over to {self.secondary.model_name}."
+            )
+            return self.secondary.generate_text(prompt, system_instruction=system_instruction)
+
+    def generate_structured(
+        self, prompt: str, response_schema: type[T], system_instruction: str | None = None
+    ) -> T:
+        try:
+            return self.primary.generate_structured(
+                prompt, response_schema=response_schema, system_instruction=system_instruction
+            )
+        except Exception as e:
+            logger.warning(
+                f"[FallbackModelProvider] Primary {self.primary.model_name} failed ({e}). "
+                f"Failing over to {self.secondary.model_name}."
+            )
+            return self.secondary.generate_structured(
+                prompt, response_schema=response_schema, system_instruction=system_instruction
+            )
+
+
+def get_model_provider(provider_type: str | None = None, **kwargs: Any) -> ModelProvider:
+    """Factory to retrieve configured model provider."""
+    p_type = (provider_type or settings.model_provider).lower()
+    if p_type == "gemini":
+        try:
+            return GeminiProvider(**kwargs)
         except ProviderAuthenticationError as e:
             logger.warning(
                 f"Gemini credentials not available ({e}). Defaulting to MockModelProvider."
             )
             return MockModelProvider()
-    return MockModelProvider()
+    elif p_type == "ollama":
+        from forge.core.providers.ollama import OllamaProvider
+        return OllamaProvider(**kwargs)
+    elif p_type == "openai":
+        from forge.core.providers.openai import OpenAIProvider
+        return OpenAIProvider(**kwargs)
+    elif p_type == "anthropic":
+        from forge.core.providers.anthropic import AnthropicProvider
+        return AnthropicProvider(**kwargs)
+    return MockModelProvider(**kwargs)

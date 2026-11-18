@@ -21,6 +21,16 @@ class ArchitectureValidator:
             "durable cold archive storage",
             "Redis is primarily an in-memory datastore; not suitable as durable cold archive storage.",
         ),
+        (
+            "kafka",
+            "embedded sensor",
+            "Kafka JVM broker is unsuitable for resource-constrained embedded microcontrollers.",
+        ),
+        (
+            "elasticsearch",
+            "acid transactional ledger",
+            "Elasticsearch lacks distributed ACID transaction guarantees required for primary financial ledgers.",
+        ),
     ]
 
     @classmethod

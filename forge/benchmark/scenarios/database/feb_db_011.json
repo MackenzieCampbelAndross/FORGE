@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-DB-011",
+  "category": "Database systems",
+  "title": "Cloud-Native Database Storage-Compute Decoupler",
+  "objective": "Build a distributed database separating stateless compute nodes from shared storage layer (Aurora style).",
+  "context": "",
+  "constraints": [
+    "Read replica lag < 10ms",
+    "Instant point-in-time restore"
+  ],
+  "expected_functional_requirements": [
+    "Execute query on compute node",
+    "Write redo log to storage fleet",
+    "Serve pages from storage"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SECURITY"
+  ],
+  "expected_components": [
+    "Compute Node",
+    "Storage Fleet",
+    "Log Coordinator",
+    "Backup Manager"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "constraint_satisfaction": 0.3,
+    "requirement_coverage": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.1
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-DB-004",
+  "category": "Database systems",
+  "title": "Multi-Master Relational Database Cluster",
+  "objective": "Design an active-active relational database with conflict-free replicated data types (CRDTs).",
+  "context": "",
+  "constraints": [
+    "Zero downtime during regional outage",
+    "Deterministic conflict resolution"
+  ],
+  "expected_functional_requirements": [
+    "Execute SQL query",
+    "Broadcast replication delta",
+    "Reconcile concurrent writes"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SECURITY"
+  ],
+  "expected_components": [
+    "SQL Frontend",
+    "Storage Engine",
+    "CRDT Resolver",
+    "Replication Broker"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "constraint_satisfaction": 0.3,
+    "requirement_coverage": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.1
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

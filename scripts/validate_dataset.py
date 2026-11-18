@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from rich.console import Console
 from rich.table import Table
 
+from forge.benchmark.catalog_generator import ScenarioCatalogGenerator
 from forge.benchmark.loader import BenchmarkLoader
 
 
@@ -21,7 +22,17 @@ def main():
     parser.add_argument(
         "--path",
         default="forge/benchmark/scenarios/feb_v1_dataset.jsonl",
-        help="Path to dataset JSONL or directory containing scenario files.",
+        help="Path to dataset JSONL, JSON, or directory containing scenario files.",
+    )
+    parser.add_argument(
+        "--export-catalog",
+        default=None,
+        help="Optional path to output markdown scenario catalog table.",
+    )
+    parser.add_argument(
+        "--export-jsonl",
+        default=None,
+        help="Optional path to export all loaded scenarios into a unified JSONL file.",
     )
     args = parser.parse_args()
 
@@ -29,7 +40,11 @@ def main():
     console.print(f"\n[bold blue]FORGE Dataset Validator[/bold blue] - Scanning: `{args.path}`\n")
 
     try:
-        scenarios = BenchmarkLoader.load_from_file(args.path)
+        if os.path.isdir(args.path):
+            scenarios = BenchmarkLoader.load_from_directory(args.path)
+        else:
+            scenarios = BenchmarkLoader.load_from_file(args.path)
+
         report = BenchmarkLoader.validate_dataset(scenarios)
 
         table = Table(title="Dataset Category Distribution")
@@ -54,6 +69,16 @@ def main():
                 f"[bold red]❌ Validation Failed: Duplicate IDs found: {report['duplicates']}[/bold red]"
             )
             sys.exit(1)
+
+        if args.export_catalog:
+            ScenarioCatalogGenerator.write_catalog_to_file(args.export_catalog, scenarios)
+            console.print(f"[bold green]Exported markdown catalog to: {args.export_catalog}[/bold green]")
+
+        if args.export_jsonl:
+            with open(args.export_jsonl, "w", encoding="utf-8") as f:
+                for sc in scenarios:
+                    f.write(sc.model_dump_json() + "\n")
+            console.print(f"[bold green]Exported unified JSONL to: {args.export_jsonl}[/bold green]")
 
         console.print(
             f"\n[bold green]✅ Dataset Validation PASSED: {report['total_scenarios']} unique scenarios verified.[/bold green]\n"

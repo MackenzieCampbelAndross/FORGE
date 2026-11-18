@@ -59,6 +59,8 @@ class BenchmarkLoader:
         all_scenarios: list[BenchmarkScenario] = []
         for root, _, files in os.walk(dir_path):
             for file in sorted(files):
+                if file.startswith("index."):
+                    continue
                 if file.endswith(".json") or file.endswith(".jsonl"):
                     full_path = os.path.join(root, file)
                     all_scenarios.extend(cls.load_from_file(full_path))

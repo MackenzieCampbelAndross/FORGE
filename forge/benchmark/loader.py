@@ -33,7 +33,10 @@ class BenchmarkLoader:
                         ) from e
         else:
             with open(file_path, encoding="utf-8") as f:
-                raw_data = json.load(f)
+                try:
+                    raw_data = json.load(f)
+                except Exception as e:
+                    raise BenchmarkError(f"Failed parsing scenario file {file_path}: {e}") from e
                 if isinstance(raw_data, list):
                     for idx, item in enumerate(raw_data):
                         try:

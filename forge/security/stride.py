@@ -117,6 +117,81 @@ class STRIDEAnalyzer:
             )
             t_counter += 1
 
+            # Repudiation
+            score, sev = RiskScoringEngine.calculate_score(LikelihoodLevel.LOW, ImpactLevel.MEDIUM)
+            res = RiskScoringEngine.calculate_residual_risk(sev, mitigation_provided=True)
+            threats.append(
+                ThreatItem(
+                    threat_id=f"THR-{t_counter:03d}",
+                    category=STRIDECategory.REPUDIATION,
+                    affected_component_id=comp.component_id,
+                    attack_scenario=f"Adversary performs unauthorized action on {comp.name} and denies action due to absent audit logging.",
+                    likelihood=LikelihoodLevel.LOW,
+                    impact=ImpactLevel.MEDIUM,
+                    severity=sev,
+                    risk_score=score,
+                    mitigation=SecurityMitigation(
+                        mitigation_id=f"MIT-{t_counter:03d}",
+                        description="Centralized append-only audit trail with cryptographic signatures and NTP sync.",
+                        owasp_mapping=MitigationCatalog.get_owasp_mapping("REPUDIATION"),
+                        verification_method="Log immutability audit and monitoring alert test",
+                    ),
+                    residual_risk=res,
+                    owasp_reference="A09:2021",
+                )
+            )
+            t_counter += 1
+
+            # Information Disclosure
+            score, sev = RiskScoringEngine.calculate_score(LikelihoodLevel.MEDIUM, ImpactLevel.HIGH)
+            res = RiskScoringEngine.calculate_residual_risk(sev, mitigation_provided=True)
+            threats.append(
+                ThreatItem(
+                    threat_id=f"THR-{t_counter:03d}",
+                    category=STRIDECategory.INFORMATION_DISCLOSURE,
+                    affected_component_id=comp.component_id,
+                    attack_scenario=f"Sensitive application data or tokens leaked in transit or memory by {comp.name}.",
+                    likelihood=LikelihoodLevel.MEDIUM,
+                    impact=ImpactLevel.HIGH,
+                    severity=sev,
+                    risk_score=score,
+                    mitigation=SecurityMitigation(
+                        mitigation_id=f"MIT-{t_counter:03d}",
+                        description="Enforce TLS 1.3 in transit, AES-256 at rest, and automated secret scanning.",
+                        owasp_mapping=MitigationCatalog.get_owasp_mapping("INFORMATION_DISCLOSURE"),
+                        verification_method="Static code analysis and SAST pipeline",
+                    ),
+                    residual_risk=res,
+                    owasp_reference="A02:2021",
+                )
+            )
+            t_counter += 1
+
+            # Elevation of Privilege
+            score, sev = RiskScoringEngine.calculate_score(LikelihoodLevel.LOW, ImpactLevel.HIGH)
+            res = RiskScoringEngine.calculate_residual_risk(sev, mitigation_provided=True)
+            threats.append(
+                ThreatItem(
+                    threat_id=f"THR-{t_counter:03d}",
+                    category=STRIDECategory.ELEVATION_OF_PRIVILEGE,
+                    affected_component_id=comp.component_id,
+                    attack_scenario=f"Privilege escalation exploiting permissive RBAC or missing authorization checks on {comp.name}.",
+                    likelihood=LikelihoodLevel.LOW,
+                    impact=ImpactLevel.HIGH,
+                    severity=sev,
+                    risk_score=score,
+                    mitigation=SecurityMitigation(
+                        mitigation_id=f"MIT-{t_counter:03d}",
+                        description="Enforce fine-grained RBAC/ABAC and context-aware policy enforcement points.",
+                        owasp_mapping=MitigationCatalog.get_owasp_mapping("ELEVATION_OF_PRIVILEGE"),
+                        verification_method="Role boundary penetration testing",
+                    ),
+                    residual_risk=res,
+                    owasp_reference="A01:2021",
+                )
+            )
+            t_counter += 1
+
         overall_posture = (
             max((t.severity for t in threats), key=lambda s: s.value)
             if threats

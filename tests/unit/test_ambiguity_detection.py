@@ -6,8 +6,8 @@ from forge.schemas.requirements import (
     NonFunctionalRequirement,
     RequirementCategory,
     RequirementPriority,
-    RequirementSource,
     RequirementsDoc,
+    RequirementSource,
 )
 
 

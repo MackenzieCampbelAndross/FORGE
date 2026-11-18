@@ -1,6 +1,7 @@
 """LangGraph StateGraph orchestration definition."""
 
 from typing import Any
+
 from langgraph.graph import END, StateGraph
 
 from forge.core.model_provider import ModelProvider

@@ -31,10 +31,10 @@ class AnalysisExecutionModel(Base):
     project_id: Mapped[str] = mapped_column(ForeignKey("projects.id"), nullable=False, index=True)
     status: Mapped[str] = mapped_column(String(32), default="IN_PROGRESS")
     started_at: Mapped[datetime] = mapped_column(default=lambda: datetime.now(UTC))
-    completed_at: Mapped[Optional[datetime]] = mapped_column(default=None)
+    completed_at: Mapped[datetime | None] = mapped_column(default=None)
     latency_seconds: Mapped[float] = mapped_column(default=0.0)
     revision_count: Mapped[int] = mapped_column(default=0)
-    error: Mapped[Optional[str]] = mapped_column(Text, default=None)
+    error: Mapped[str | None] = mapped_column(Text, default=None)
 
     project: Mapped["ProjectModel"] = relationship(back_populates="executions")
     report: Mapped[Optional["EngineeringReportModel"]] = relationship(

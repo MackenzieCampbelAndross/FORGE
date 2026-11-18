@@ -1,0 +1,55 @@
+{
+  "example_id": "EX-SAAS-RBAC-001",
+  "name": "Enterprise B2B Multi-Tenant Identity & Fine-Grained Authorization Platform",
+  "domain": "Security / SaaS / Enterprise Architecture",
+  "objective": "Design an enterprise-grade multi-tenant identity, fine-grained access control (ReBAC / Zanzibar), and data isolation architecture supporting 50,000 corporate organizations with strict compliance requirements (HIPAA, SOC 2 Type II, GDPR, FedRAMP).",
+  "constraints": [
+    "Strict tenant data isolation preventing cross-tenant data contamination via PostgreSQL Row-Level Security (RLS) and cryptographic tenant keys",
+    "Sub-10ms authorization policy evaluation latency for fine-grained resource permission checks at 50,000 checks/sec",
+    "Seamless enterprise SAML 2.0 / OIDC SSO federation with automated SCIM 2.0 user lifecycle provisioning",
+    "Customer-Managed Encryption Keys (CMEK / BYOK) envelope encryption using AWS KMS / HashiCorp Vault",
+    "Tamper-proof, cryptographically signed audit logging streamed to customer SIEMs (Splunk, Datadog, AWS S3)"
+  ],
+  "components": [
+    {
+      "component_id": "COMP-SSO-BROKER",
+      "name": "Enterprise Identity & SSO Federation Broker",
+      "technology": "Ory Kratos / Hydra / Go",
+      "responsibility": "Orchestrates SAML 2.0 and OpenID Connect authentication handshakes with corporate identity providers (Okta, Azure AD, Ping Identity, Google Workspace).",
+      "interfaces": ["SAML 2.0 Endpoint", "OIDC Discovery", "SCIM 2.0 REST API"]
+    },
+    {
+      "component_id": "COMP-AUTHZ-ENGINE",
+      "name": "Relationship-Based Access Control (ReBAC) Engine",
+      "technology": "OpenFGA / SpiceDB (Google Zanzibar Architecture) on CockroachDB",
+      "responsibility": "Evaluates hierarchical authorization tuples (e.g. user:alice is editor of document:doc1 because she is member of organization:org1) with sub-10ms latency.",
+      "interfaces": ["gRPC Check / Expand API", "Local In-Memory Cache"]
+    },
+    {
+      "component_id": "COMP-TENANT-DATA-TIER",
+      "name": "Multi-Tenant Relational Storage with RLS",
+      "technology": "PostgreSQL 16 with Citus Sharding & Row-Level Security",
+      "responsibility": "Guarantees cryptographic and logical database separation per tenant, enforcing session variables (SET app.current_tenant_id) on all SQL connections.",
+      "interfaces": ["PostgreSQL Wire Protocol with PgBouncer"]
+    },
+    {
+      "component_id": "COMP-KEY-VAULT",
+      "name": "CMEK / BYOK Envelope Encryption Coordinator",
+      "technology": "HashiCorp Vault / AWS KMS Transit Engine",
+      "responsibility": "Generates and wraps per-tenant Data Encryption Keys (DEKs) using corporate Key Encryption Keys (KEKs), enabling instantaneous tenant data shredding.",
+      "interfaces": ["Vault REST API / AWS KMS SDK"]
+    },
+    {
+      "component_id": "COMP-AUDIT-PIPELINE",
+      "name": "Immutable SIEM Audit Log Shipper",
+      "technology": "Apache Kafka / AWS Kinesis Firehose / ClickHouse",
+      "responsibility": "Emits append-only, SHA-256 chained security audit logs to customer SIEM destinations for real-time compliance alerting.",
+      "interfaces": ["Splunk HEC", "Amazon S3", "Datadog Logs API"]
+    }
+  ],
+  "security_threats": [
+    "SPOOFING: SAML assertion replay attack bypassing tenant SSO authentication",
+    "INFORMATION_DISCLOSURE: Leaked tenant ID in multi-tenant API route causing Cross-Tenant Data Access (BOLA / IDOR)",
+    "ELEVATION_OF_PRIVILEGE: Malicious user exploiting circular role hierarchy to grant themselves super-admin privileges"
+  ]
+}

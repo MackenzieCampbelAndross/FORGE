@@ -1,0 +1,105 @@
+{
+  "benchmark_version": "1.0.0",
+  "name": "FORGE Engineering Benchmark (FEB) Scenario Index",
+  "total_scenarios": 100,
+  "domains": {
+    "backend": {
+      "name": "Backend systems",
+      "prefix": "FEB-BACKEND",
+      "count": 20,
+      "directory": "forge/benchmark/scenarios/backend",
+      "focus": "High-throughput APIs, streaming, background workers, event-driven pipelines",
+      "rubric_weights": {
+        "requirement_coverage": 0.25,
+        "constraint_satisfaction": 0.25,
+        "dependency_validity": 0.20,
+        "mitigation_coverage": 0.15,
+        "decision_traceability": 0.15
+      }
+    },
+    "distributed": {
+      "name": "Distributed systems",
+      "prefix": "FEB-DISTRIB",
+      "count": 15,
+      "directory": "forge/benchmark/scenarios/distributed",
+      "focus": "Consensus, partition tolerance, distributed transactions, edge sync",
+      "rubric_weights": {
+        "requirement_coverage": 0.20,
+        "constraint_satisfaction": 0.20,
+        "dependency_validity": 0.25,
+        "decision_traceability": 0.20,
+        "mitigation_coverage": 0.15
+      }
+    },
+    "aiml": {
+      "name": "AI and ML systems",
+      "prefix": "FEB-AIML",
+      "count": 15,
+      "directory": "forge/benchmark/scenarios/aiml",
+      "focus": "Inference serving, RAG pipelines, training orchestration, vector search",
+      "rubric_weights": {
+        "requirement_coverage": 0.25,
+        "constraint_satisfaction": 0.20,
+        "decision_traceability": 0.25,
+        "dependency_validity": 0.15,
+        "mitigation_coverage": 0.15
+      }
+    },
+    "database": {
+      "name": "Database systems",
+      "prefix": "FEB-DB",
+      "count": 15,
+      "directory": "forge/benchmark/scenarios/database",
+      "focus": "Sharding, multi-model storage, time-series indexing, ACID guarantees",
+      "rubric_weights": {
+        "constraint_satisfaction": 0.30,
+        "requirement_coverage": 0.20,
+        "decision_traceability": 0.25,
+        "dependency_validity": 0.15,
+        "mitigation_coverage": 0.10
+      }
+    },
+    "cloud": {
+      "name": "Cloud infrastructure",
+      "prefix": "FEB-CLOUD",
+      "count": 15,
+      "directory": "forge/benchmark/scenarios/cloud",
+      "focus": "Multi-region, Kubernetes topologies, zero-trust VPC, hybrid connectivity",
+      "rubric_weights": {
+        "constraint_satisfaction": 0.25,
+        "dependency_validity": 0.25,
+        "requirement_coverage": 0.20,
+        "mitigation_coverage": 0.15,
+        "decision_traceability": 0.15
+      }
+    },
+    "security": {
+      "name": "Security critical systems",
+      "prefix": "FEB-SEC",
+      "count": 10,
+      "directory": "forge/benchmark/scenarios/security",
+      "focus": "Payment gateways, HSM key managers, auth providers, audit logging",
+      "rubric_weights": {
+        "mitigation_coverage": 0.35,
+        "constraint_satisfaction": 0.25,
+        "requirement_coverage": 0.15,
+        "dependency_validity": 0.15,
+        "decision_traceability": 0.10
+      }
+    },
+    "general": {
+      "name": "General software architecture",
+      "prefix": "FEB-GEN",
+      "count": 10,
+      "directory": "forge/benchmark/scenarios/general",
+      "focus": "Monolith modularization, legacy migration, plugin extensions",
+      "rubric_weights": {
+        "requirement_coverage": 0.25,
+        "constraint_satisfaction": 0.25,
+        "dependency_validity": 0.20,
+        "decision_traceability": 0.15,
+        "mitigation_coverage": 0.15
+      }
+    }
+  }
+}

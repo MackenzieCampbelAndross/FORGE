@@ -1,0 +1,55 @@
+{
+  "example_id": "EX-VIDEO-CDN-001",
+  "name": "Global Multi-Tenant Video Streaming & Edge CDN Architecture",
+  "domain": "Media / Networking / Distributed Systems",
+  "objective": "Design an edge-accelerated, multi-tier video delivery network capable of serving 50,000,000 concurrent global video streams (4K HDR, HLS, MPEG-DASH, Low-Latency CMAF) with sub-second startup times and 99.999% availability.",
+  "constraints": [
+    "Sub-1-second initial video playback startup time across 120+ global Points of Presence (PoPs)",
+    "Origin offload factor of >= 98.5% under unexpected viral traffic spikes",
+    "Hardware-accelerated live video transcoding pipeline scaling to 5,000 concurrent live broadcasts",
+    "Multi-DRM protection (Apple FairPlay, Google Widevine, Microsoft PlayReady) with tokenized stream playback URLs",
+    "Zero-buffer bandwidth adaptation using client-side ABR (Adaptive Bitrate) feedback algorithms"
+  ],
+  "components": [
+    {
+      "component_id": "COMP-EDGE-CACHE",
+      "name": "Global Anycast Edge Cache Fleet",
+      "technology": "OpenResty / Varnish / Cloudflare Workers / BGP Anycast",
+      "responsibility": "Terminates TLS 1.3 / HTTP/3 connections at the nearest metropolitan PoP, serves cached video segments (.m4s, .ts), and enforces signed URL token validation.",
+      "interfaces": ["HTTPS/3", "HTTP/2", "BGP Anycast Routing"]
+    },
+    {
+      "component_id": "COMP-ORIGIN-SHIELD",
+      "name": "Hierarchical Origin Shield Cluster",
+      "technology": "Envoy Proxy / Redis Cache Mesh on Bare Metal",
+      "responsibility": "Collapses redundant cache misses across edge PoPs into single origin requests, eliminating thundering-herd load on master media storage.",
+      "interfaces": ["gRPC Internal", "HTTP/2"]
+    },
+    {
+      "component_id": "COMP-TRANSCODER",
+      "name": "Distributed GPU Transcoding Pipeline",
+      "technology": "FFmpeg / NVIDIA NVENC / Kubernetes Autoscaler",
+      "responsibility": "Encodes live RTMP/SRT broadcast feeds into adaptive bitrate ladders (1080p, 720p, 480p, 360p) in H.264, HEVC, and AV1 formats.",
+      "interfaces": ["SRT / RTMP Ingest", "CMAF Output S3"]
+    },
+    {
+      "component_id": "COMP-DRM-SERVER",
+      "name": "Universal Key & DRM Licensing Server",
+      "technology": "Go / AWS KMS / HSM Appliance",
+      "responsibility": "Issues hardware-bound FairPlay and Widevine cryptographic licenses to authenticated subscriber client players.",
+      "interfaces": ["DRM License REST API"]
+    },
+    {
+      "component_id": "COMP-QOE-ANALYTICS",
+      "name": "Real-Time Quality of Experience (QoE) Telemetry Pipeline",
+      "technology": "ClickHouse / Apache Kafka / Vector",
+      "responsibility": "Aggregates player buffering ratios, bitrate switching events, and CDN egress health metrics to drive automated traffic rerouting.",
+      "interfaces": ["ClickHouse TCP / Kafka Protocol"]
+    }
+  ],
+  "security_threats": [
+    "SPOOFING: Forged stream tokens bypassing subscription paywalls to restream video",
+    "TAMPERING: Man-in-the-middle injection of unauthorized ads into HLS media manifests",
+    "DENIAL_OF_SERVICE: DDoS floods targeting origin shield servers to knock out live broadcasts"
+  ]
+}

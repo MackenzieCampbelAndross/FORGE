@@ -1,0 +1,42 @@
+{
+  "scenario_id": "FEB-SEC-004",
+  "category": "Security critical systems",
+  "title": "Enterprise Privileged Access Management (PAM) Vault",
+  "objective": "Design a privileged session broker with real-time keystroke recording and credential rotation.",
+  "context": "",
+  "constraints": [
+    "Zero permanent root passwords",
+    "Kill malicious sessions instantly"
+  ],
+  "expected_functional_requirements": [
+    "Check out ephemeral root password",
+    "Proxy SSH/RDP session",
+    "Record screen/keystrokes"
+  ],
+  "expected_nfr_categories": [
+    "SECURITY",
+    "COMPLIANCE",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "PAM Proxy",
+    "Password Rotator",
+    "Session Recorder",
+    "Vault Storage"
+  ],
+  "expected_threat_categories": [
+    "ELEVATION_OF_PRIVILEGE",
+    "SPOOFING",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "mitigation_coverage": 0.35,
+    "constraint_satisfaction": 0.25,
+    "requirement_coverage": 0.15,
+    "dependency_validity": 0.15,
+    "decision_traceability": 0.1
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

@@ -1,0 +1,42 @@
+{
+  "scenario_id": "FEB-SEC-009",
+  "category": "Security critical systems",
+  "title": "Confidential Computing Enclave Orchestrator",
+  "objective": "Build an orchestrator deploying containerized workloads inside AMD SEV-SNP / Intel SGX enclaves.",
+  "context": "",
+  "constraints": [
+    "Attestation verification before boot",
+    "Encrypted memory hardware enforcement"
+  ],
+  "expected_functional_requirements": [
+    "Verify enclave attestation",
+    "Inject decryption keys into enclave",
+    "Run secure computation"
+  ],
+  "expected_nfr_categories": [
+    "SECURITY",
+    "COMPLIANCE",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Attestation Service",
+    "Enclave Manager",
+    "Key Escrow",
+    "Computation Host"
+  ],
+  "expected_threat_categories": [
+    "ELEVATION_OF_PRIVILEGE",
+    "SPOOFING",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "mitigation_coverage": 0.35,
+    "constraint_satisfaction": 0.25,
+    "requirement_coverage": 0.15,
+    "dependency_validity": 0.15,
+    "decision_traceability": 0.1
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

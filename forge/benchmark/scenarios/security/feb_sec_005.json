@@ -1,0 +1,42 @@
+{
+  "scenario_id": "FEB-SEC-005",
+  "category": "Security critical systems",
+  "title": "Automated Dynamic Application Security Testing (DAST) Scanner",
+  "objective": "Architect an automated web application vulnerability scanner simulating authenticated attacks.",
+  "context": "",
+  "constraints": [
+    "Zero destructive data deletion",
+    "Precise OWASP Top 10 detection"
+  ],
+  "expected_functional_requirements": [
+    "Crawl application surface",
+    "Inject security test vectors",
+    "Verify vulnerability payload"
+  ],
+  "expected_nfr_categories": [
+    "SECURITY",
+    "COMPLIANCE",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Crawler Engine",
+    "Payload Injector",
+    "Response Analyzer",
+    "Vulnerability DB"
+  ],
+  "expected_threat_categories": [
+    "ELEVATION_OF_PRIVILEGE",
+    "SPOOFING",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "mitigation_coverage": 0.35,
+    "constraint_satisfaction": 0.25,
+    "requirement_coverage": 0.15,
+    "dependency_validity": 0.15,
+    "decision_traceability": 0.1
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

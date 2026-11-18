@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-011",
+  "category": "AI and ML systems",
+  "title": "Autonomous Code Review Agent",
+  "objective": "Design a static analysis and LLM-assisted code review bot with verifiable fix suggestions.",
+  "context": "",
+  "constraints": [
+    "Integrate with GitHub webhooks",
+    "Zero hallucinated imports"
+  ],
+  "expected_functional_requirements": [
+    "Parse Git diff",
+    "Run linter and AST analysis",
+    "Generate PR comments"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Webhook Receiver",
+    "AST Analyzer",
+    "Review Agent",
+    "GitHub API Adapter"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

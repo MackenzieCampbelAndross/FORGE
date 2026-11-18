@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-012",
+  "category": "AI and ML systems",
+  "title": "Document OCR and Table Extraction Pipeline",
+  "objective": "Build an automated financial invoice scanner extracting complex nested tables into JSON.",
+  "context": "",
+  "constraints": [
+    "Accuracy > 98% on scanned receipts",
+    "Support distorted PDFs"
+  ],
+  "expected_functional_requirements": [
+    "Preprocess image",
+    "Run vision layout model",
+    "Map table schema"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "PDF Ingest",
+    "Layout Model",
+    "Table Normalizer",
+    "Export Store"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

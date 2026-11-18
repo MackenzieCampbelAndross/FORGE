@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-010",
+  "category": "AI and ML systems",
+  "title": "Vector Database Index Sharder",
+  "objective": "Architect a horizontally scalable HNSW vector database supporting billion-scale vectors.",
+  "context": "",
+  "constraints": [
+    "Recall > 95% at 50 QPS per shard",
+    "Fast vector insert"
+  ],
+  "expected_functional_requirements": [
+    "Index new vector",
+    "Partition across shards",
+    "Execute approximate k-NN"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Routing Node",
+    "HNSW Shard Cluster",
+    "Index Compactor",
+    "WAL Store"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

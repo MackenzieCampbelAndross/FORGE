@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-005",
+  "category": "AI and ML systems",
+  "title": "Multi-Agent Autonomous Research Orchestrator",
+  "objective": "Build a hierarchical multi-agent platform delegating search, synthesis, and code execution tasks.",
+  "context": "",
+  "constraints": [
+    "Prevent infinite agent loops",
+    "Strict sandbox isolation"
+  ],
+  "expected_functional_requirements": [
+    "Decompose user query",
+    "Delegate sub-tasks",
+    "Synthesize findings"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Supervisor Agent",
+    "Worker Agents",
+    "Tool Sandbox",
+    "Audit Store"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

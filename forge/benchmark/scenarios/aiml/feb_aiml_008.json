@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-008",
+  "category": "AI and ML systems",
+  "title": "Personalized Recommendation Engine",
+  "objective": "Design a two-stage recommendation platform (candidate generation + ranking model) for 50M items.",
+  "context": "",
+  "constraints": [
+    "End-to-end latency < 80ms",
+    "Freshness updates < 5 mins"
+  ],
+  "expected_functional_requirements": [
+    "Retrieve candidate items",
+    "Score with ranking DNN",
+    "Filter seen items"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Candidate Retrieval",
+    "Ranking Service",
+    "User Profile Store",
+    "Feedback Collector"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-013",
+  "category": "AI and ML systems",
+  "title": "Distributed Model Serving Mesh",
+  "objective": "Architect a Kubernetes model serving cluster managing vLLM and TensorRT-LLM with autoscaling.",
+  "context": "",
+  "constraints": [
+    "Dynamic batching optimization",
+    "Scale to zero during idle hours"
+  ],
+  "expected_functional_requirements": [
+    "Route request to replica",
+    "Manage continuous batching",
+    "Monitor GPU metrics"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Model Gateway",
+    "Inference Pods",
+    "GPU Autoscaler",
+    "Telemetry Exporter"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-014",
+  "category": "AI and ML systems",
+  "title": "Synthetic Data Generation Platform",
+  "objective": "Design a privacy-preserving synthetic tabular data engine using diffusion models and GANs.",
+  "context": "",
+  "constraints": [
+    "Differential privacy epsilon < 1.0",
+    "Preserve statistical distributions"
+  ],
+  "expected_functional_requirements": [
+    "Profile sensitive dataset",
+    "Train generative model",
+    "Sample synthetic rows"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Data Profiler",
+    "Generative Engine",
+    "Privacy Evaluator",
+    "Export Pipeline"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

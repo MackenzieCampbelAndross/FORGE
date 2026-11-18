@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-004",
+  "category": "AI and ML systems",
+  "title": "Continuous Model Training & Fine-Tuning Pipeline",
+  "objective": "Architect an MLOps pipeline automating dataset validation, LoRA fine-tuning, and model evaluation.",
+  "context": "",
+  "constraints": [
+    "Automate regression rollback",
+    "Track lineage with MLflow"
+  ],
+  "expected_functional_requirements": [
+    "Validate training dataset",
+    "Execute LoRA training",
+    "Evaluate safety benchmarks"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Data Validator",
+    "Training Cluster",
+    "Model Registry",
+    "Eval Harness"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

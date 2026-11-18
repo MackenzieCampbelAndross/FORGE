@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-AIML-009",
+  "category": "AI and ML systems",
+  "title": "AI Guardrails and Content Moderation Gateway",
+  "objective": "Build a real-time prompt and completion safety filter detecting PII, jailbreaks, and toxicity.",
+  "context": "",
+  "constraints": [
+    "Filter latency < 50ms",
+    "Zero false-negative on critical safety"
+  ],
+  "expected_functional_requirements": [
+    "Scan inbound prompt",
+    "Detect adversarial jailbreaks",
+    "Mask sensitive PII"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "SECURITY",
+    "RELIABILITY"
+  ],
+  "expected_components": [
+    "Guardrail Proxy",
+    "Jailbreak Classifier",
+    "PII Masker",
+    "Policy Store"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE",
+    "DENIAL_OF_SERVICE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.2,
+    "decision_traceability": 0.25,
+    "dependency_validity": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-GEN-002",
+  "category": "General software architecture",
+  "title": "Plugin Architecture for Extensible Desktop Application",
+  "objective": "Architect an isolated plugin sandbox supporting third-party extensions in Electron/Python.",
+  "context": "",
+  "constraints": [
+    "Process isolation prevents crash of main app",
+    "Permission-gated API access"
+  ],
+  "expected_functional_requirements": [
+    "Load plugin manifest",
+    "Spawn isolated worker",
+    "Expose IPC capabilities"
+  ],
+  "expected_nfr_categories": [
+    "USABILITY",
+    "RELIABILITY",
+    "PERFORMANCE"
+  ],
+  "expected_components": [
+    "Host Application Core",
+    "Plugin Manager",
+    "IPC Sandbox",
+    "Permission Broker"
+  ],
+  "expected_threat_categories": [
+    "TAMPERING",
+    "SPOOFING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.25,
+    "dependency_validity": 0.2,
+    "decision_traceability": 0.15,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

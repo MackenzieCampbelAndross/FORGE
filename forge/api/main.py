@@ -1,10 +1,11 @@
 """FastAPI application factory and server entry point."""
 
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 
 from forge.api.routes import analysis, evaluation, health, projects
 from forge.core.config import settings
@@ -76,3 +77,14 @@ app.include_router(health.router)
 app.include_router(projects.router)
 app.include_router(analysis.router)
 app.include_router(evaluation.router)
+
+STATIC_INDEX = Path(__file__).parent / "static" / "index.html"
+
+
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
+@app.get("/dashboard", response_class=HTMLResponse, include_in_schema=False)
+async def serve_dashboard():
+    """Serve developer portal and visual architecture dashboard."""
+    if STATIC_INDEX.exists():
+        return HTMLResponse(content=STATIC_INDEX.read_text(encoding="utf-8"))
+    return HTMLResponse("<h1>FORGE v1.0 Engineering Platform</h1><p><a href='/docs'>OpenAPI Docs</a></p>")

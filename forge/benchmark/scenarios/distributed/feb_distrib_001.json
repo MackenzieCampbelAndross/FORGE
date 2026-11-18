@@ -1,0 +1,40 @@
+{
+  "scenario_id": "FEB-DISTRIB-001",
+  "category": "Distributed systems",
+  "title": "Distributed Lock Service (Chubby/Raft)",
+  "objective": "Implement a fault-tolerant distributed locking coordinator with lease renewal.",
+  "context": "",
+  "constraints": [
+    "Linearizable reads and writes",
+    "Zero split-brain during partitions"
+  ],
+  "expected_functional_requirements": [
+    "Acquire named lock",
+    "Renew heartbeat lease",
+    "Release lock"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Raft Node Cluster",
+    "Lease Manager",
+    "State Machine"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

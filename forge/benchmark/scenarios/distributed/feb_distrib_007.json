@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-DISTRIB-007",
+  "category": "Distributed systems",
+  "title": "Fault-Tolerant Message Broker Cluster",
+  "objective": "Architect a partitioned, replicated commit-log broker similar to Apache Kafka.",
+  "context": "",
+  "constraints": [
+    "Strict partition order",
+    "High watermark commit replication"
+  ],
+  "expected_functional_requirements": [
+    "Produce message",
+    "Replicate to in-sync replicas",
+    "Consume from offset"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Broker Node",
+    "Partition Controller",
+    "Commit Log",
+    "Consumer Coordinator"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

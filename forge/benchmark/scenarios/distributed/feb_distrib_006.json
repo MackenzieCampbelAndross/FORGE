@@ -1,0 +1,40 @@
+{
+  "scenario_id": "FEB-DISTRIB-006",
+  "category": "Distributed systems",
+  "title": "Distributed Rate Limiter Service",
+  "objective": "Implement a global token-bucket rate limiter with sliding window synchronization.",
+  "context": "",
+  "constraints": [
+    "Decision latency < 2ms",
+    "Resilient to cross-datacenter WAN lag"
+  ],
+  "expected_functional_requirements": [
+    "Check rate quota",
+    "Decrement tokens",
+    "Sync window delta"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Rate Limit Proxy",
+    "Local Redis Cache",
+    "Cross-DC Gossip Sync"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

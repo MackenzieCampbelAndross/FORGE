@@ -1,0 +1,40 @@
+{
+  "scenario_id": "FEB-DISTRIB-014",
+  "category": "Distributed systems",
+  "title": "Edge CDN Dynamic Routing & PoP Director",
+  "objective": "Build a Anycast DNS and latency-aware traffic director routing global users to best PoP.",
+  "context": "",
+  "constraints": [
+    "Sub-50ms DNS response",
+    "Automated failover of dead PoPs"
+  ],
+  "expected_functional_requirements": [
+    "Monitor PoP health",
+    "Calculate optimal path",
+    "Respond with geo-routed IP"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Health Poller",
+    "Routing Engine",
+    "Anycast DNS Daemon"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

@@ -1,0 +1,40 @@
+{
+  "scenario_id": "FEB-DISTRIB-015",
+  "category": "Distributed systems",
+  "title": "Distributed Consensus-Driven Clock Synchronizer",
+  "objective": "Implement a hybrid logical clock (HLC) coordination layer for distributed serializability.",
+  "context": "",
+  "constraints": [
+    "Bounded drift under 100 microseconds",
+    "Monotonicity guarantee"
+  ],
+  "expected_functional_requirements": [
+    "Read physical time",
+    "Compute HLC timestamp",
+    "Exchange peer sync messages"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Clock Daemon",
+    "Peer Sync Bus",
+    "Monotonic Verifier"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

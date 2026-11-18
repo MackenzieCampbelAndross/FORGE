@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-DISTRIB-002",
+  "category": "Distributed systems",
+  "title": "Globally Distributed Object Storage",
+  "objective": "Design an S3-compatible multi-region object store with erasure coding.",
+  "context": "",
+  "constraints": [
+    "11 nines of durability",
+    "Geo-replication across continents"
+  ],
+  "expected_functional_requirements": [
+    "Put object chunk",
+    "Reconstruct erasure shards",
+    "Serve get requests"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Object Gateway",
+    "Metadata Coordinator",
+    "Storage Storage Node",
+    "Replication Daemon"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

@@ -1,0 +1,40 @@
+{
+  "scenario_id": "FEB-DISTRIB-004",
+  "category": "Distributed systems",
+  "title": "Global Consistent Cache (Memcached/Redis Cluster)",
+  "objective": "Build a multi-region distributed in-memory cache with cache invalidation broadcasts.",
+  "context": "",
+  "constraints": [
+    "Sub-10ms global reads",
+    "Eventual cache coherency"
+  ],
+  "expected_functional_requirements": [
+    "Get cache key",
+    "Set with TTL",
+    "Invalidate cross-region keys"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Cache Node",
+    "Cluster Proxy",
+    "Invalidation Bus"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

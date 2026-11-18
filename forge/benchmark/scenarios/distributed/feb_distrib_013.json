@@ -1,0 +1,40 @@
+{
+  "scenario_id": "FEB-DISTRIB-013",
+  "category": "Distributed systems",
+  "title": "Distributed Deadlock Detector",
+  "objective": "Architect a distributed transaction manager detecting and resolving wait-for cycles.",
+  "context": "",
+  "constraints": [
+    "Minimal phantom deadlock false positives",
+    "Fast cycle abort"
+  ],
+  "expected_functional_requirements": [
+    "Register resource lock wait",
+    "Build global wait graph",
+    "Abort youngest victim"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Lock Monitor",
+    "Graph Analyzer",
+    "Transaction Arbiter"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

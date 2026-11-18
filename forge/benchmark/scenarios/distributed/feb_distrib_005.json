@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-DISTRIB-005",
+  "category": "Distributed systems",
+  "title": "Distributed Log Aggregator (Vector/Fluentd)",
+  "objective": "Design an agentless log collection pipeline forwarding server logs to cold storage.",
+  "context": "",
+  "constraints": [
+    "Zero log dropping during backpressure",
+    "Buffering on disk"
+  ],
+  "expected_functional_requirements": [
+    "Collect syslog stream",
+    "Parse structured fields",
+    "Flush batch to S3"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Log Collector",
+    "Buffer Queue",
+    "Parser Engine",
+    "Storage Sink"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

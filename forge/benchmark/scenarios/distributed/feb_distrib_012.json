@@ -1,0 +1,40 @@
+{
+  "scenario_id": "FEB-DISTRIB-012",
+  "category": "Distributed systems",
+  "title": "Peer-to-Peer Large Artifact Distribution",
+  "objective": "Design a BitTorrent-style distributed distribution network for 50GB container images.",
+  "context": "",
+  "constraints": [
+    "Maximize internal network transfer",
+    "Limit WAN egress"
+  ],
+  "expected_functional_requirements": [
+    "Register artifact chunk",
+    "Discover seed peers",
+    "Verify SHA-256 blocks"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "PERFORMANCE",
+    "SCALABILITY"
+  ],
+  "expected_components": [
+    "Tracker Server",
+    "Peer Daemon",
+    "Integrity Verifier"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "INFORMATION_DISCLOSURE"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.2,
+    "constraint_satisfaction": 0.2,
+    "dependency_validity": 0.25,
+    "decision_traceability": 0.2,
+    "mitigation_coverage": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

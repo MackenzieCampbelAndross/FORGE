@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-BACKEND-006",
+  "category": "Backend systems",
+  "title": "Global E-Commerce Inventory Synchronizer",
+  "objective": "Build an inventory reservation service preventing overselling during flash sales.",
+  "context": "",
+  "constraints": [
+    "Strict consistency on stock levels",
+    "P95 latency < 50ms"
+  ],
+  "expected_functional_requirements": [
+    "Check stock",
+    "Atomically reserve inventory",
+    "Release expired holds"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "RELIABILITY",
+    "SECURITY"
+  ],
+  "expected_components": [
+    "Inventory API",
+    "Lock Manager",
+    "Stock Database",
+    "Hold Expiry Worker"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "SPOOFING"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.25,
+    "dependency_validity": 0.2,
+    "mitigation_coverage": 0.15,
+    "decision_traceability": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

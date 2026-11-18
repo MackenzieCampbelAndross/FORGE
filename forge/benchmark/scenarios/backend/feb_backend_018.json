@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-BACKEND-018",
+  "category": "Backend systems",
+  "title": "Customer Feedback Sentiment Pipeline",
+  "objective": "Design a customer review ingestion backend triggering automated response workflows.",
+  "context": "",
+  "constraints": [
+    "Process 5,000 reviews/min",
+    "Support multi-language translation"
+  ],
+  "expected_functional_requirements": [
+    "Ingest review",
+    "Score sentiment polarity",
+    "Route negative alerts"
+  ],
+  "expected_nfr_categories": [
+    "PERFORMANCE",
+    "RELIABILITY",
+    "SECURITY"
+  ],
+  "expected_components": [
+    "Review API",
+    "NLP Classifier",
+    "Routing Engine",
+    "CRM Connector"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "SPOOFING"
+  ],
+  "evaluation_rubric": {
+    "requirement_coverage": 0.25,
+    "constraint_satisfaction": 0.25,
+    "dependency_validity": 0.2,
+    "mitigation_coverage": 0.15,
+    "decision_traceability": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

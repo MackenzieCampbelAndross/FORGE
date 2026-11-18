@@ -1,0 +1,41 @@
+{
+  "scenario_id": "FEB-CLOUD-005",
+  "category": "Cloud infrastructure",
+  "title": "Automated Cloud Cost FinOps Optimizer",
+  "objective": "Build an infrastructure scanner identifying idle cloud resources, orphaned disks, and spot candidates.",
+  "context": "",
+  "constraints": [
+    "Save estimated 25% compute spend",
+    "Zero disruption to production"
+  ],
+  "expected_functional_requirements": [
+    "Scan cloud resource metrics",
+    "Identify underutilized nodes",
+    "Execute rightsizing recommendations"
+  ],
+  "expected_nfr_categories": [
+    "RELIABILITY",
+    "SECURITY",
+    "OPERATIONAL"
+  ],
+  "expected_components": [
+    "FinOps Scanner",
+    "Cost Model Evaluator",
+    "Automation Runner",
+    "Dashboard DB"
+  ],
+  "expected_threat_categories": [
+    "DENIAL_OF_SERVICE",
+    "TAMPERING",
+    "ELEVATION_OF_PRIVILEGE"
+  ],
+  "evaluation_rubric": {
+    "constraint_satisfaction": 0.25,
+    "dependency_validity": 0.25,
+    "requirement_coverage": 0.2,
+    "mitigation_coverage": 0.15,
+    "decision_traceability": 0.15
+  },
+  "ground_truth_status": "Programmatically validated",
+  "dataset_version": "1.0.0"
+}

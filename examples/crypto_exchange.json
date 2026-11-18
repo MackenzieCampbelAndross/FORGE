@@ -1,0 +1,55 @@
+{
+  "example_id": "EX-CRYPTO-EXCHANGE-001",
+  "name": "Ultra-Low Latency Institutional Crypto Order Matching Engine",
+  "domain": "Fintech / Trading / Systems",
+  "objective": "Architect a deterministic, high-throughput central limit order book (CLOB) and execution venue capable of processing 2,000,000 order cancellations and placements per second with sub-100-microsecond deterministic matching latency.",
+  "constraints": [
+    "Deterministic execution order with strictly non-blocking lock-free single-writer principle (LMAX Disruptor pattern)",
+    "Sub-100-microsecond p99.9 order placement to ack latency under peak market volatility",
+    "Continuous state snapshotting and write-ahead logging (WAL) ensuring zero trade loss across failovers",
+    "Real-time WebSocket / FIX 4.4 / ITCH / OUCH feed distribution for market makers",
+    "Strict SOC2 Type II and MiCA regulatory audit compliance"
+  ],
+  "components": [
+    {
+      "component_id": "COMP-GATEWAY",
+      "name": "Institutional FIX / Binary Ingress Gateway",
+      "technology": "C++20 / Aeron Messaging Protocol / DPDK",
+      "responsibility": "Terminates co-located direct market access (DMA) cross-connects, performs wire-speed token bucket pre-trade credit checks, and sequences raw orders into hardware ring buffers.",
+      "interfaces": ["FIX 4.4", "Binary OUCH Protocol"]
+    },
+    {
+      "component_id": "COMP-MATCHING-CORE",
+      "name": "Single-Threaded Deterministic CLOB Matching Core",
+      "technology": "Rust (Zero-Allocation) / Cache-Aligned Memory Pool",
+      "responsibility": "Executes price-time priority order matching without lock contention, generating deterministic fill and cancel events onto the output journal.",
+      "interfaces": ["Shared Memory IPC Ring Buffer"]
+    },
+    {
+      "component_id": "COMP-REPLICATION-BUS",
+      "name": "Microsecond State Machine Replicator",
+      "technology": "Aeron Cluster / Raft State Consensus over Solarflare EF_VI",
+      "responsibility": "Replicates order matching journal across hot-standby node cluster with zero garbage collection pauses and deterministic replay.",
+      "interfaces": ["UDP Unicast Kernel-Bypass"]
+    },
+    {
+      "component_id": "COMP-MARKET-DATA",
+      "name": "L2 / L3 Market Data Broadcaster",
+      "technology": "Go / C++ / WebSockets / ITCH Multicast",
+      "responsibility": "Aggregates matched trades and order book depth snapshots, streaming tick-by-tick market data to institutional algorithmic traders.",
+      "interfaces": ["WebSocket", "Multicast ITCH 5.0"]
+    },
+    {
+      "component_id": "COMP-SETTLEMENT-LEDGER",
+      "name": "Post-Trade Clearing & Custody Ledger",
+      "technology": "TigerBeetle / PostgreSQL",
+      "responsibility": "Processes double-entry financial settlement, margin collateral balance updates, and cold-storage withdrawal authorizations.",
+      "interfaces": ["Financial Accounting gRPC"]
+    }
+  ],
+  "security_threats": [
+    "SPOOFING: Stolen API secret keys executing fraudulent wash trading and liquidity draining",
+    "TAMPERING: Clock manipulation altering timestamp precedence on order arrival queues",
+    "DENIAL_OF_SERVICE: High-frequency quote-stuffing attacks exhausting socket buffer memory"
+  ]
+}

@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/MackenzieCampbelAndross/FORGE)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-40%20passed-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/tests-100%2B%20passed-brightgreen.svg)]()
 [![Code%20Style](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 [![Type%20Check](https://img.shields.io/badge/types-mypy%20verified-blue.svg)](http://mypy-lang.org/)
 
@@ -213,11 +213,47 @@ python -m mypy forge
 
 ---
 
-## 11. Documentation Index
+## 11. Architecture Export Formats & Model Providers
+
+### Supported Diagram and Document Exporters
+Every blueprint synthesized by FORGE can be serialized using `ReportExporter`:
+- **Interactive HTML**: Self-contained web dashboard with client-rendered Mermaid.js diagrams.
+- **Graphviz DOT**: Orthogonal directed graphs (`.dot`) for CI/CD visualization pipelines.
+- **Structurizr C4 DSL**: Enterprise architecture models (`.dsl`) with Container and System Context views.
+- **PlantUML**: Standard component diagrams (`.puml`) with environment packaging.
+- **Terminal ASCII**: Monospaced terminal diagram rendering for CLI and log outputs.
+- [Detailed Guide](docs/EXPORT_FORMATS.md)
+
+### Supported Model Providers & Resilience
+- **Google Gemini**: Modern Google GenAI SDK integration.
+- **Local Ollama**: 100% offline, air-gapped execution (Llama 3, Mistral, DeepSeek-R1, Qwen 2.5).
+- **OpenAI & Compatible**: GPT-4o, vLLM, Groq, Together, Azure OpenAI endpoints.
+- **Anthropic Claude**: Claude 3.5 Sonnet / Opus via Messages API.
+- **Resilience Engine**: Token-bucket rate limiting, 4-mode jitter exponential backoff, and transparent multi-provider failover (`FallbackModelProvider`).
+- [Detailed Guide](docs/MODEL_PROVIDERS.md)
+
+---
+
+## 12. Enterprise Blueprint Examples
+
+Explore production-grade system specifications in the `examples/` directory:
+- [Autonomous Vehicle Telemetry Ingestion](examples/autonomous_vehicle.json) — 1M vehicles, 10M msg/sec, ISO 26262 ASIL D safety telemetry.
+- [Crypto Order Matching Engine](examples/crypto_exchange.json) — Sub-100µs deterministic LMAX ring buffer, Aeron Raft state machine.
+- [Global Video Streaming CDN](examples/video_cdn.json) — 50M concurrent streams, Anycast edge cache, GPU transcoding.
+- [Multi-Tenant SaaS RBAC Platform](examples/saas_rbac.json) — Zanzibar ReBAC, PostgreSQL Row-Level Security, CMEK envelope encryption.
+
+---
+
+## 13. Documentation Index
 
 - [ARCHITECTURE.md](docs/ARCHITECTURE.md) — Comprehensive architectural relationships and diagrams.
 - [TECHNICAL_SPECIFICATION.md](docs/TECHNICAL_SPECIFICATION.md) — Schemas, data models, and algorithms.
 - [AGENT_DESIGN.md](docs/AGENT_DESIGN.md) — Agent responsibilities and revision loops.
+- [DEVELOPER_GUIDE.md](docs/DEVELOPER_GUIDE.md) — Step-by-step custom agent authoring guide.
+- [SYSTEM_DESIGN_CHEATSHEET.md](docs/SYSTEM_DESIGN_CHEATSHEET.md) — Production architecture interview reference.
+- [SCENARIO_CATALOG.md](docs/SCENARIO_CATALOG.md) — Catalog of all 100 FEB benchmark scenarios.
+- [EXPORT_FORMATS.md](docs/EXPORT_FORMATS.md) — Guide to Graphviz, C4 DSL, PlantUML, and HTML exports.
+- [MODEL_PROVIDERS.md](docs/MODEL_PROVIDERS.md) — LLM provider setup, failover, and rate limiting.
 - [BENCHMARK_METHODOLOGY.md](docs/BENCHMARK_METHODOLOGY.md) — FEB dataset construction and scoring.
 - [METRICS.md](docs/METRICS.md) — Mathematical definitions for all 25+ metrics.
 - [API_REFERENCE.md](docs/API_REFERENCE.md) — Complete REST endpoint documentation.
@@ -227,15 +263,18 @@ python -m mypy forge
 
 ---
 
-## 12. Roadmap
+## 14. Roadmap
 
 - [x] v1.0.0 — Multi-Agent System Design Engine, FEB 100 Dataset, STRIDE Modeling, Traceability Matrix, FastAPI, SQLite/PostgreSQL persistence.
+- [x] Multi-Provider Architecture (Gemini, Ollama, OpenAI, Anthropic, Mock).
+- [x] Multi-Format Exporters (Markdown, JSON, HTML, Graphviz DOT, C4 DSL, PlantUML, ASCII).
+- [x] Enterprise Blueprint Examples (Autonomous Vehicle, Crypto Exchange, Video CDN, SaaS RBAC).
 - [ ] v1.1.0 — Interactive Human-in-the-Loop review pane via WebSockets.
 - [ ] v1.2.0 — Multi-cloud cost estimator integration (AWS/GCP/Azure pricing APIs).
 - [ ] v1.3.0 — Automated Infrastructure-as-Code (Terraform) blueprint scaffolding export.
 
 ---
 
-## 13. License
+## 15. License
 
 Apache-2.0 License. Developed by Mackenzie Campbel Andross.

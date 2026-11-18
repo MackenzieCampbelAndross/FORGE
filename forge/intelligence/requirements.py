@@ -52,7 +52,7 @@ class RequirementAnalyzer:
             [
                 doc.executive_summary,
                 " ".join(fr.description for fr in doc.functional_requirements),
-                " ".join(nfr.description for nfr in doc.non_functional_requirements),
+                " ".join(f"{nfr.description} {nfr.measurable_target}" for nfr in doc.non_functional_requirements),
                 " ".join(c.description for c in doc.constraints),
             ]
         )
